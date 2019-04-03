@@ -4,30 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Time</title>
+    
     <script type="text/javascript">
-      function updateClock() {
-        //Set Time
-        var currentTime = new Date();
-
-        //Set Hours, Minutes, and Seconds
-        var currentHours = currentTime.getHours();
-        var currentMinutes = currentTime.getMinutes();
-        var currentSeconds = currentTime.getSeconds();
-
-        console.log(currentTime, currentHours, currentMinutes, currentSeconds);
-
-        //Format it to look nice
-        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-        var timeOfDay = currentHours < 12 ? "AM" : "PM";
-        var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-        document.getElementById("clock").innerHTML = currentTimeString;
-
+      function updateClock(){
+      //Set Time
+      var currentTime = new Date();
+  
+      //Set Hours, Minutes, and Seconds
+      var currentHours = currentTime.getHours();
+      var currentMinutes = currentTime.getMinutes();
+      var currentSeconds = currentTime.getSeconds();
+  
+      console.log(currentTime, currentHours, currentMinutes, currentSeconds);
+  
+      //Format it to look nice
+      currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+      currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+      var timeOfDay = currentHours < 12 ? "AM" : "PM";
+      var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+      
+      document.getElementById("clock").innerHTML = currentTimeString;
+      
       }
-    </script>
+      
+  </script>
   </head>
-  <body>
-    <h1 id="clock" onload="updateClock(); setInterval('updateClock()', 1000)"></h1>
+  <body onload="setInterval('updateClock()')"> 
+    <div style="position: absolute; left: '50%'"><h1 id="clock"></h1></div>
+
   </body>
+ 
+
 </html>
