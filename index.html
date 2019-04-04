@@ -26,10 +26,13 @@
       
       document.getElementById("clock").innerHTML = currentTimeString;
       }
-      
+
   </script>
   </head>
   <body onload="setInterval('updateClock()')"> 
-    <div id ="time"><h1 id="clock"></h1></div>
+    <div id ="time">
+      <h1 id="clock"></h1>
+      <div id="info" onclick="window.open('https://en.wikipedia.org/wiki/Time')"><img src=""/></div>
+    </div>
   </body>
 </html>
