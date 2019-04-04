@@ -7,26 +7,17 @@
 #info {
   position: relative;
   float: right;
-  top: -70;
-  right: 10;
+  bottom: 115;
+  right: 12.5;
   background-color: white;
-  padding: 10;
-  width: 10;
-  height: 10;
+  width: 30;
+  height: 30;
   border-radius: 50%;
+  content:url("http://www.stickpng.com/assets/images/5a4613abd099a2ad03f9c992.png");
+  padding: 0;
+  margin: 0;
 }
 
 #info:hover {
   filter: brightness(70%);
-}
-
-#helpImage {
-  position: relative;
-  max-width: 300%;
-  max-height: 300%;
-  display: flex;
-  left: -100%; 
-  top: -45%;
-  justify-content: center;
-
 }
