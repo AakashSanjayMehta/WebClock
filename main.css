@@ -2,21 +2,31 @@
   margin: 5%;
   text-align: center;
   border: 2px solid black;
-  box-shadow: 2px
+  box-shadow: 2px;
 }
 #info {
   position: relative;
   float: right;
   top: -70;
   right: 10;
-  background-color: beige;
+  background-color: white;
   padding: 10;
-  width: 15;
-  height: 15;
+  width: 10;
+  height: 10;
   border-radius: 50%;
-  border: 1px solid black
 }
 
-#info:hover{
-  filter: brightness(50%)
+#info:hover {
+  filter: brightness(70%);
+}
+
+#helpImage {
+  position: relative;
+  max-width: 300%;
+  max-height: 300%;
+  display: flex;
+  left: -100%; 
+  top: -45%;
+  justify-content: center;
+
 }

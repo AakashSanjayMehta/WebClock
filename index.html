@@ -4,35 +4,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Time</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    
+    <link rel="stylesheet" type="text/css" href="main.css" />
+
     <script type="text/javascript">
-      function updateClock(){
-      //Set Time
-      var currentTime = new Date();
+      function updateClock() {
+        //Set Time
+        var currentTime = new Date();
 
-      //Set Hours, Minutes, and Seconds
-      var currentHours = currentTime.getHours();
-      var currentMinutes = currentTime.getMinutes();
-      var currentSeconds = currentTime.getSeconds();
-      var timeOfDay = currentHours < 12 ? "AM" : "PM";
-      console.log(currentTime, currentHours, currentMinutes, currentSeconds);
-  
-      //Format it to look nice
-      currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
-      currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
-      currentHours = (currentHours > 12? currentHours - 12: currentHours)
-      var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-      
-      document.getElementById("clock").innerHTML = currentTimeString;
+        //Set Hours, Minutes, and Seconds
+        var currentHours = currentTime.getHours();
+        var currentMinutes = currentTime.getMinutes();
+        var currentSeconds = currentTime.getSeconds();
+        var timeOfDay = currentHours < 12 ? "AM" : "PM";
+        console.log(currentTime, currentHours, currentMinutes, currentSeconds);
+
+        //Format it to look nice
+        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+        currentHours = currentHours > 12 ? currentHours - 12 : currentHours;
+        var currentTimeString =
+          currentHours +
+          ":" +
+          currentMinutes +
+          ":" +
+          currentSeconds +
+          " " +
+          timeOfDay;
+
+        document.getElementById("clock").innerHTML = currentTimeString;
       }
-
-  </script>
+    </script>
   </head>
-  <body onload="setInterval('updateClock()')"> 
-    <div id ="time">
+  <body onload="setInterval('updateClock()')">
+    <div id="time">
       <h1 id="clock"></h1>
-      <div id="info" onclick="window.open('https://en.wikipedia.org/wiki/Time')"><img src=""/></div>
+      <div
+        id="info"
+        onmouseover=""
+        onclick="window.open('https://en.wikipedia.org/wiki/Time')"
+      >
+        <img id ="helpImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Icon-round-Question_mark.svg/600px-Icon-round-Question_mark.svg.png"/>
+      </div>
     </div>
   </body>
 </html>
